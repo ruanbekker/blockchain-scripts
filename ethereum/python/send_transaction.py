@@ -16,7 +16,7 @@ recipient_address = os.environ['ETH_RECIPIENT_ADDRESS']
 private_key = os.environ['ETH_PRIVATE_KEY']
 
 # Transaction Value and Gas
-balance = web3.eth.get_balance(wallet_address)
+balance = web3.eth.get_balance(sender_address)
 balance_in_ether = web3.from_wei(balance, 'ether')
 wei_to_send = web3.to_wei(0.01, 'ether')
 gas_price = web3.eth.gas_price
